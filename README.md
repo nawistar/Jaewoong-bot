@@ -1,2 +1,2 @@
 # Jaewoong-bot
-재웅봇
+최재웅봇
