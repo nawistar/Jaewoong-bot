@@ -9,15 +9,9 @@ using namespace std;
 
 const int BOT_LINE_COUNT = 9;
 const string BOT_lines[BOT_LINE_COUNT] = {
-	 "   ,_._._._._._",
-	 "  <= == = = > \\ \\",
-	 "  /            \\ |",
-	 " /---.    ,---. \\ \\",
-	 "(  @ ) / (  @ )--\\ |",
-	 "|      ``'       |&)",
-	 " \\ 0  /===\\  0  ./~",
-	 "  \\   \\~~~/    /",
-	 "   `^~----~~\"``"
+	 "   `^~----~~\"``","  \\   \\~~~/    /"," \\ 0  /===\\  0  ./~",
+	 "|      ``'       |&)","(  @ ) / (  @ )--\\ |"," /---.    ,---. \\ \\",
+	 "  /            \\ |","  <= == = = > \\ \\","   ,_._._._._._"
 };
 
 struct Player
@@ -51,7 +45,7 @@ int main(void)
 		for (short i = 0; i < BOT_LINE_COUNT; ++i)
 		{
 	    	Goto(player.x, player.y + i);
-			cout << BOT_lines[i];
+			cout << BOT_lines[BOT_LINE_COUNT - i - 1];
 	    }
 		Move_Key(player);
 		
