@@ -67,8 +67,10 @@ int main(void)
 		updatePlayer(player);		
 		if (moved || player.isJumping|| player.y != prev_y)
 			drawPlayer(player, prev_x, prev_y);
-		Goto(0, 0);
-		cout << player.x << ", " << player.y << "   ";
+			Goto(0, 0);
+			cout << CLEAR_LINE;
+			Goto(0, 0);
+			cout << player.x << ", " << player.y << "   ";
 		Sleep(FRAME_DELAY);
 	} while(key != 27);
 
